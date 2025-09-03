@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,400&display=swap');
+
+body {
+    background-color: black;
+    
+}
+
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.filter {
+    filter: invert();
+}
+
+
+.border {
+    border: 2px solid red;
+}
+
+.grey-tile {
+    background-color: #121212;
+    color: white;
+    margin: 10px 0px 10px 10px;
+
+}
+
+.BR {
+    border-radius: 9px;
+}
+
+
+
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+    /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #2e2e2e;
+    /* Track color */
+    border-radius: 10px;
+    /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #555;
+    /* Thumb color */
+    border-radius: 10px;
+    /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #999;
+    /* Thumb color on hover */
+}
+
+/* Remove arrows from scrollbar */
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+/* For Firefox */
+html {
+    scrollbar-width: thin;
+    /* Make the scrollbar thinner */
+    scrollbar-color: #555 #2e2e2e;
+    /* Thumb and track colors */
+}
+
+/* General styling for elements that might have scrollbars */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #555 #2e2e2e;
+}
+
+.seperation{
+    background-color: rgb(57, 56, 56);
+    height: 7px;
+    width: 100%;
+}
+
+
+@media (max-width: 1250px){
+    
+    .grey-tile {
+        margin: 10px 0px 10px 0px;
+    }
+
+    .containerCards::-webkit-scrollbar {
+        display: none; /* Hide the scrollbar for Webkit browsers */
+    }
+
+}
