@@ -1,0 +1,39 @@
+:root {
+    --primary-color: #3d6e36; /* Set your primary color */
+    --font-family: 'Arial', sans-serif; /* Set your font family */
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  /* Add responsive styles as needed */
+  @media screen and (max-width: 768px) {
+    .nav-links {
+      display: none; /* Hide links on small screens */
+    }
+    /* Add styles for hamburger menu */
+  }
