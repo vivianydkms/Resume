@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins&display=swap');
+
+body{
+    background-color: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+.main {
+    background-image: url("assets/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: max(1362px, 100%);
+    height: 690px;
+    width: 100%;
+    position: relative;
+
+}
+
+nav {
+    display: flex;
+    max-width: 70vw;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    padding-top: 19px;
+
+}
+
+nav img{
+    width:130px;
+}
+
+.main .box {
+
+    height: 690px;
+    width: 100%;
+    opacity: 0.69;
+    position: absolute;
+    top: 0;
+    background-color: black;
+
+}
+
+.hero {
+    color: aliceblue;
+    height: 66vh;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    margin-top: 40px;
+
+}
+
+.hero span:first-child {
+    font-weight: 900;
+    font-size: 50px;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    /* font-variation-settings:"wdth" 100; */
+}
+
+.hero span:nth-child(2)
+/*or .hero :nth-child(2) */
+    { 
+    font-size: 22px;
+}
+
+.hero span:nth-child(3), .faq span {
+    color: white;
+    font-size: 22px;
+
+}
+
+.seperation{
+    background-color: rgb(57, 56, 56);
+    height: 7px;
+    width: 100%;
+}
+
+.btn{
+    padding: 4px 28px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.435);
+}
+
+.red-btn{
+    background-color: red;
+    padding: 10px 15px;
+    font-size: 18px;
+}
+.red-btn-si{
+    background-color: red;
+
+}
+
+.eng-btn{
+    background-color:  rgba(0, 0, 0, 0.3);
+    margin-right: 20px;
+    
+}
+
+.main input, .faq input{
+    padding: 10px 15px;
+    font-size: 18px;
+    color: white;
+    width: 368px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.435);
+    border-radius: 5px;
+
+}
+
+.first{
+    display: flex;
+    width: 80vw;
+    margin: auto;
+    color: white;
+    align-items: center;
+}
+
+.contenjoy h1{
+    font-weight: 900;
+    font-size: 50px;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.tvimg{
+    position: relative;
+    margin: 30px;
+}
+
+.tvimg img{
+    position: relative;
+    z-index: 1;
+}
+.tvimg video{
+    position: absolute;
+    top: 97px;
+    right: 74px;
+} 
+
+
+.saif img{
+    width: 600px;
+}
+
+.saif video{
+    width: 373px;
+    right: 125px;
+    top: 53px;
+}
+
+@media screen and (max-width:1064px){
+
+    .btn-container{
+        display: flex;
+    gap: 10px;
+    flex-direction: column;
+    width: 79px;
+    margin-left: -38px;
+    }
+
+    .eng-btn{
+        margin-right: 2px;
+    }
+
+    
+    nav img{
+        width: 100px;
+    }
+    nav .btn{
+     width: 80px;
+padding: 0px;
+    }
+
+    .hero{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero span:first-child{
+        font-size: 25px;
+    }
+
+    .first{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        text-align: center;
+        width: 100vw;
+        position: relative;
+    }
+
+    .contenjoy{
+
+        width: 80vw;
+        margin: auto;
+    }
+
+    .contenjoy h1{
+        font-size: 25px;
+    }
+
+    .tvimg{
+        position: relative;
+    }
+
+    .tvimg img{
+       width: 350px;
+       position: relative;
+    }
+
+    .tvimg video{
+        width: 264px;
+        top: 51px;
+        right: 38px;
+        position: absolute;
+    }
+
+    .saif img{
+        width: 350px;
+    }
+
+    .saif video{
+        width: 210px;
+        right: 73px;
+        top: 43px;
+    }
+
+    .kids img{
+        width: 300px;
+    }
+}
+
+.faq{
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.faq .question{
+    transition: all 1s ease-out;
+    background-color: #2d2d2d;
+    font-size:20px;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.faq .question:hover{
+background-color: #555454;
+}
+
+.faq h1{
+    color: white;
+    font-weight: 900;
+    font-size: 50px;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-align: center;
+    padding: 20px;
+
+}
+
+.lastemail {
+    gap: 10px;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    color: white;
+    max-width: 70vw;
+    margin: auto;
+    padding: 60px;
+}
+
+footer .questions {
+    padding: 34px 0;
+}
+
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-item a{
+    
+    color: white;
+}
+
+@media screen and (max-width:1064px){
+
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    footer .questions {
+        padding: 3px 0;
+    }
+
+}
