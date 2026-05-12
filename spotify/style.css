@@ -142,6 +142,7 @@
 .containerMain {
     background-color: rgb(40, 40, 40);
     padding: 6px;
+    padding-bottom: 120px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -151,7 +152,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-height: 249px;
+    max-height: 2439px;
     overflow: scroll;
     gap: 12px;
     overflow-x: hidden;
@@ -377,22 +378,21 @@
     .containerCards {
 
         display: flex;
-        flex-direction: row;
-        max-height: 19vh;
+        flex-direction: column;
+        max-height: 149vh;
         flex-wrap: nowrap;
         justify-content: flex-start;
-        height: 200px;
         overflow: scroll;
         gap: 12px;
         overflow: auto;
         width: 100%;
         white-space: nowrap;
+        align-items: center;
     }
 
     .card {
         max-width: none;
-        width: 108px;
-        padding: 16px;
+        width: 298px;
         display: flex;
         flex-direction: column;
         gap: 4px;

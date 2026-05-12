@@ -18,10 +18,9 @@ function convertSecondsToMinutes(seconds) {
 
 
 async function GetSongs(folder) {
-    currFolder = folder;
-    let a = await fetch(`http://127.0.0.1:3000/spotify/${folder}/`)
+    currFolder = `songs/${folder}`;
+    let a = await fetch(`/songs/${folder}/`)
     let response = await a.text();
-    // console.log(response);
     let div = document.createElement("div")
     div.innerHTML = response;
     let as = div.getElementsByTagName("a")
@@ -40,16 +39,14 @@ async function GetSongs(folder) {
              <img class="filter" src="musicIcon.svg" alt="">
             <div class="info">
                 <div>${song.replaceAll("%20", " ")}</div>
-                                <div>Song Artist</div>
+                <div>Song Artist</div>
             </div>
             <img class="filter" src="play.svg" alt="">
             </li>`
     }
 
-    //  Attach event listener to each song
     Array.from(document.querySelector(".SongList").getElementsByTagName("li")).forEach(e => {
-        e.getElementsByTagName("img")[1].addEventListener("click", element => {
-            console.log(e.querySelector(".info").firstElementChild.innerHTML);
+        e.getElementsByTagName("img")[1].addEventListener("click", () => {
             playMusic(e.querySelector(".info").firstElementChild.innerHTML)
         })
     })
@@ -57,66 +54,56 @@ async function GetSongs(folder) {
 
 
 const playMusic = (track, pause) => {
-    currentSong.src = `/spotify/${currFolder}/` + track
+    currentSong.src = `/${currFolder}/` + track
     if (!pause) {
-
         currentSong.play()
         play.src = "pause.svg"
     }
     document.querySelector(".songInfo").innerHTML = decodeURI(track)
     document.querySelector(".songTime").innerHTML = "00:00 / 00:00"
-
 }
 
-
 async function displayAlbums() {
-    let a = await fetch(`http://127.0.0.1:3000/spotify/songs/`)
+    let a = await fetch(`/songs/`)
     let response = await a.text();
     let div = document.createElement("div")
     div.innerHTML = response;
     let anchors = div.getElementsByTagName("a")
     let cardContainer = document.querySelector(".containerCards")
     let array = Array.from(anchors)
+
     for (let index = 0; index < array.length; index++) {
         const e = array[index];
-
-        if (e.href.includes("/songs")) {
+        if (e.href.includes("/songs/")) {
             let folder = e.href.split("/").slice(-2)[0];
-            // get metadata from folder
-            let a = await fetch(`http://127.0.0.1:3000/spotify/songs/${folder}/info.json`)
-            let response = await a.json();
-            // console.log(response);
+            let res = await fetch(`/songs/${folder}/info.json`)
+            let response = await res.json();
             cardContainer.innerHTML = cardContainer.innerHTML + `<div data-folder="${folder}" class="card BR poppins-medium">
-                            <img class="play" src="play.svg" alt="">
-                            <img class="albumPhoto BR"
-                                src="/spotify/songs/${folder}/cover.jpeg" alt="">
-                            <h2>${response.title}</h2>
-                            <p>${response.description}</p>
-                        </div>`
+                <img class="play" src="play.svg" alt="">
+                <img class="albumPhoto BR" src="/songs/${folder}/cover.jpeg" alt="">
+                <h2>${response.title}</h2>
+                <p>${response.description}</p>
+            </div>`
         }
     }
-    // Click on Cards
+
     Array.from(document.getElementsByClassName("card")).forEach(e => {
         e.addEventListener("click", item => {
-            songs = GetSongs(`songs/${item.currentTarget.dataset.folder}`)
+            GetSongs(item.currentTarget.dataset.folder)
             document.querySelector(".left").style.left = "0%"
 
-            //change name on side bar
             let PlaylistHeading = e.children[2].innerHTML
             let PlaylistImage = e.children[1].src
             document.querySelector(".heading").innerHTML = `<img style="width:70px;" src="${PlaylistImage}" alt="">${PlaylistHeading}`
-
         })
     })
-
 }
 
 async function main() {
     // get list of songs
-    await GetSongs("songs/ncs")
+    await GetSongs("ncs")
     playMusic(songs[0], true)
 
-    // Display albums
     displayAlbums()
 
     document.addEventListener('keydown', function (event) {
