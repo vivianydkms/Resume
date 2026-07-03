@@ -1,3 +1,6 @@
+fastapi
+uvicorn
+streamlit
 langchain
 langchain-community
 chromadb
@@ -6,3 +9,4 @@ pypdf
 pytesseract
 pymupdf
 pillow
+python-multipart
