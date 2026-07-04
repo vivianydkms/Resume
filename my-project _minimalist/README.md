@@ -1,8 +1,13 @@
-# React + Vite
+# React + Vite Project: Minimalistic Task Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple task tracker application I built in 2024 while exploring web development. It features a minimalistic UI designed to help you keep track of your daily tasks without the clutter. 
 
-Currently, two official plugins are available:
+**🔗 Live Demo:** [myprojectmin.vercel.app](https://myprojectmin.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
+* **Add Tasks:** Quickly jot down new tasks you need to complete.
+* **Edit Tasks:** Easily modify existing tasks if plans change.
+* **Mark Complete:** Check off tasks as you finish them to track your progress.
+
+---
+*Built with React & Vite.*
