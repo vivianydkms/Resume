@@ -1,2 +1,7 @@
-Overview
-These screenshots showcase the web application interface for my Retrieval-Augmented Generation (RAG) project. Originally developed during my internship to retrieve and parse PDF resumes, I have since transformed it into an intelligent research assistant. The system now indexes AI and Machine Learning research papers, allowing users to query complex concepts and instantly receive the most relevant, context-aware academic resources. 📚
+## 📄 About the Project
+
+- Originally built as a **RAG-based Resume Retrieval System** during my internship
+- 🔍 Forked and reworked the GitHub project to serve a new use case
+- Now retrieves **relevant AI/ML research papers** instead of resumes
+- 🤖 Powered by Retrieval Augmented Generation (RAG) for accurate, context-aware results
+- Input corpus: curated collection of research papers in **Artificial Intelligence** and **Machine Learning**
