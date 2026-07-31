@@ -1,1 +1,2 @@
-
+Overview
+These screenshots showcase the web application interface for my Retrieval-Augmented Generation (RAG) project. Originally developed during my internship to retrieve and parse PDF resumes, I have since transformed it into an intelligent research assistant. The system now indexes AI and Machine Learning research papers, allowing users to query complex concepts and instantly receive the most relevant, context-aware academic resources. 📚
